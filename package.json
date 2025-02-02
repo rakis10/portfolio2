@@ -2,11 +2,15 @@
   "name": "sidefolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rakis10.github.io/portfolio2",
+ 
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
@@ -31,5 +35,8 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
